@@ -1,9 +1,7 @@
 #include <iostream>
-//#include "token.h"
 #include <string>
 #include<vector>
 
-#include <unordered_map>
 using namespace std;
 
 
@@ -63,7 +61,7 @@ class tokeniser
    int cursor;
    int length;
    char current;
-   std::string local;
+   string local;
    vector<TOKEN*> TOKEN_LIST;
 
    char advance(){
@@ -106,7 +104,7 @@ class tokeniser
 
    TOKEN * tokenizeDigit(){
      TOKEN * newtoken = new TOKEN;
-     string temp = " ";
+     string temp = "";
      while(isdigit(current)){
        temp.push_back(current);
        advance();
